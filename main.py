@@ -40,6 +40,8 @@ tool_mode = st.sidebar.selectbox(
     ["💬 Chat Tutor", "📝 Summary", "🧠 Quiz", "🧩 Flashcards"]
 )
 
+st.write("GOOGLE_API_KEY exists:", "GEMINI_API_KEY" in st.secrets)
+
 
 # -------------------------
 # SESSION STATE
