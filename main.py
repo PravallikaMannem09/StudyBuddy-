@@ -40,7 +40,18 @@ tool_mode = st.sidebar.selectbox(
     ["💬 Chat Tutor", "📝 Summary", "🧠 Quiz", "🧩 Flashcards"]
 )
 
-st.write("GOOGLE_API_KEY exists:", "GEMINI_API_KEY" in st.secrets)
+from langchain_google_genai import ChatGoogleGenerativeAI
+import streamlit as st
+
+llm = ChatGoogleGenerativeAI(
+    model="gemini-2.5-flash",
+    google_api_key=st.secrets["GEMINI_API_KEY"]
+)
+
+response = llm.invoke("Hello")
+st.write(response.content)
+
+st.stop()
 
 
 # -------------------------
