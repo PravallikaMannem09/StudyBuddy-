@@ -1,7 +1,7 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_classic.chains import RetrievalQA
 from langchain_classic.prompts import PromptTemplate
-from utils.prompts import SYSTEM_TEMPLATE
+from utils.prompt import SYSTEM_TEMPLATE
 
 import streamlit as st
 import os
